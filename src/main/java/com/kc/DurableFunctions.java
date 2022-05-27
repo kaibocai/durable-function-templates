@@ -50,9 +50,9 @@ public class DurableFunctions {
             @DurableOrchestrationTrigger(name = "orchestratorRequestProtoBytes") String orchestratorRequestProtoBytes) {
         return OrchestrationRunner.loadAndRun(orchestratorRequestProtoBytes, ctx -> {
             String result = "";
-            result += ctx.callActivity("SayHello", "Tokyo", String.class).get() + ", ";
-            result += ctx.callActivity("SayHello", "Seattle", String.class).get();
-            result += ctx.callActivity("SayHello", "London", String.class).get();
+            result += ctx.callActivity("SayHello", "Tokyo", String.class).await() + ", ";
+            result += ctx.callActivity("SayHello", "Seattle", String.class).await();
+            result += ctx.callActivity("SayHello", "London", String.class).await();
             return result;
         });
     }

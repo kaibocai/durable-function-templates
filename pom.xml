@@ -11,11 +11,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <azure.functions.maven.plugin.version>1.18.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>2.0.1</azure.functions.java.library.version>
-        <durabletask.azurefunctions>0.7.0-SNAPSHOT</durabletask.azurefunctions>
-        <durabletask.sdk>0.7.0</durabletask.sdk>
+        <durabletask.azurefunctions>0.1.0-SNAPSHOT</durabletask.azurefunctions>
+        <durabletask.client>1.0.0-beta.1</durabletask.client>
         <functionAppName>test-maven-20220512155800637</functionAppName>
     </properties>
 
@@ -34,8 +34,8 @@
 
         <dependency>
             <groupId>com.microsoft.durabletask</groupId>
-            <artifactId>durabletask-sdk</artifactId>
-            <version>${durabletask.sdk}</version>
+            <artifactId>durabletask-client</artifactId>
+            <version>${durabletask.client}</version>
         </dependency>
 
         <!-- Test -->
